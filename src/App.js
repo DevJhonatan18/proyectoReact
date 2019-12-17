@@ -1,14 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Logo from './Logo';
+import Input from './Input';
+import { useEffect, useState } from 'react';
+
 
 function App() {
+
+    const [logo , setLogo] = useState(0)
+    const [valor, setValor] = useState(0)
+   //const logo = useState("logo.svg")
+   //const otro = logo[1];
+   //const otro2 = logo[0];
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Logo url= {logo} acc={setLogo}  inputValor={valor}  inputAcc={setValor}  />
+        <Input inputValor={valor}  inputAcc={setValor} />
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+             Componente - Padre - {valor}
         </p>
         <a
           className="App-link"
